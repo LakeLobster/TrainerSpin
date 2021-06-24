@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TrainerSpin</string>
+    <string name="letsconnectneo">Let\'s connect to the Neo2t</string>
+    <string name="beginneoconnection">To begin, make sure the Neo2t is powered up, then tap next.</string>
+    <string name="next">Next</string>
+    <string name="selectdevicetouse">Select the device to use:</string>
+    <string name="nodevicesfound">Can\'t find device....</string>
+    <string name="tryagain">Try Again</string>
+    <string name="notatacx">Not the right device?</string>
+</resources>

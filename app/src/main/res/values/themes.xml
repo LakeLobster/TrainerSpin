@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TrainerSpin" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="toolbarStyle">@style/NeoAppBarTheme</item>
+        <item name="android:toolbarStyle">@style/NeoAppBarTheme</item>
+    </style>
+
+    <style name="MenuTheme" parent="Theme.AppCompat.Light">
+    </style>
+
+    <style name="NeoAppBarTheme" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">#3333aa</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:actionMenuTextColor">#00ffff</item>
+        <item name="titleTextAppearance">@style/MyActionBarTitleText</item>
+        <item name="android:titleTextAppearance">@style/MyActionBarTitleText</item>
+        <!--<item name="android:homeAsUpIndicator">@drawable/backaction</item>
+        <item name="android:navigationIcon">@drawable/backaction</item>-->
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="MyActionBarTitleText"
+        parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="Theme.TrainerSpin">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">#66000000</item>
+    </style>
+
+    <style name="WizardTitle">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">#3333aa</item>
+    </style>
+
+</resources>

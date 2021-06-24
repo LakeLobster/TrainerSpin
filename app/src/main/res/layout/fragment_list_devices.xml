@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.lakelobster.trainerspin.TacxViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.device.DeviceSetupListOfDevicesFragment"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:textSize="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/WizardTitle"
+            android:text="@string/selectdevicetouse"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewScanning"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Scanning for Bluetooth Devices..."
+            app:layout_constraintTop_toBottomOf="@id/textView6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/progressBar2"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:indeterminate="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewScanning"
+            app:layout_constraintTop_toBottomOf="@+id/textViewScanning"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/deviceListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:scrollbars="vertical"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewScanning"
+            tools:itemCount="3"
+            tools:listitem="@layout/device_list_item" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/dbprogressbar"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+        </androidx.core.widget.ContentLoadingProgressBar>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
